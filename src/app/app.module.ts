@@ -11,26 +11,24 @@ import { TimelinesComponent } from './timelines/timelines.component';
 import {AppRoutingModule} from './app-routing.module';
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
+import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
+import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
+import {ImageGalleryModule} from './image-gallery/image-gallery.module';
+import {GalleryConfig} from './image-gallery/token';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent,
-    RegisterFinalComponent,
-    LoginComponent,
-    TimelinesComponent,
-    YoutubePlaylistComponent,
-    YoutubePlayerComponent
-
-
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    AppRoutingModule
+    ImageGalleryModule
   ],
-  providers: [],
+  providers: [
+    {provide: GalleryConfig, useValue: 1}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
