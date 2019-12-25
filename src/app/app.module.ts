@@ -16,6 +16,7 @@ import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail
 import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
 import {ImageGalleryModule} from './image-gallery/image-gallery.module';
 import {GalleryConfig} from './image-gallery/token';
+import {ImgSliderModule} from './img-slider/img-slider.module';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import {GalleryConfig} from './image-gallery/token';
   ],
   imports: [
     BrowserModule,
-    ImageGalleryModule
+    ImgSliderModule
   ],
   providers: [
     {provide: GalleryConfig, useValue: 1}
