@@ -1,34 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { RegisterFinalComponent } from './register-final/register-final.component';
-import { LoginComponent } from './login/login.component';
-import { TimelinesComponent } from './timelines/timelines.component';
-
-import {AppRoutingModule} from './app-routing.module';
-import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
-import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
-import { DictionaryComponent } from './dictionary/dictionary.component';
-import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
-import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
-import {ImageGalleryModule} from './image-gallery/image-gallery.module';
-import {GalleryConfig} from './image-gallery/token';
-import {ImgSliderModule} from './img-slider/img-slider.module';
-
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogEditComponent } from './blog-edit/blog-edit.component';
+import {YoutubePlayerComponent} from './youtube-player/youtube-player.component';
+import {YoutubePlaylistComponent} from './youtube-playlist/youtube-playlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    BlogComponent,
+    BlogDetailComponent,
+    BlogEditComponent,
+    YoutubePlayerComponent,
+    YoutubePlaylistComponent
   ],
   imports: [
     BrowserModule,
-    ImgSliderModule
-  ],
-  providers: [
-    {provide: GalleryConfig, useValue: 1}
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })

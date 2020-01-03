@@ -1,7 +1,10 @@
 import {YoutubePlaylistComponent} from './youtube-playlist/youtube-playlist.component';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {NgModule} from '@angular/core';
 import {YoutubePlayerComponent} from './youtube-player/youtube-player.component';
+import {NgModule} from '@angular/core';
+import {BlogComponent} from './blog/blog.component';
+import {BlogDetailComponent} from './blog-detail/blog-detail.component';
+import {BlogEditComponent} from './blog-edit/blog-edit.component';
 
 const routes: Routes = [
   {
@@ -11,6 +14,15 @@ const routes: Routes = [
       path: ':id',
       component: YoutubePlayerComponent
     }]
+  }, {
+    path: 'blog',
+    component: BlogComponent
+  }, {
+    path: 'blog/:id',
+    component: BlogDetailComponent
+  }, {
+    path: 'blog/:id/edit',
+    component: BlogEditComponent
   }
 ];
 
